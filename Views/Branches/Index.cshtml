@@ -1,0 +1,83 @@
+@model IEnumerable<OrionApp.Models.Branch>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BranchName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BranchLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BranchManager)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BranchContact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BranchEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BranchPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BranchName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BranchLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BranchManager)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BranchContact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BranchEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BranchPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

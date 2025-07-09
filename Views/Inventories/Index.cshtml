@@ -1,0 +1,89 @@
+@model IEnumerable<OrionApp.Models.Inventory>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StoreId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StockCurrent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StockMin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StockMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastEntryDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastExitDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StockCurrent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StockMin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StockMax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastEntryDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastExitDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedAt)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

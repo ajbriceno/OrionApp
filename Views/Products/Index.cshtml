@@ -1,0 +1,119 @@
+@model IEnumerable<OrionApp.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdBrand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdModel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdSerialNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdPartNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdPriceUnit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdPriceRetail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdPriceWholesale)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdMeasurementUnit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupplierId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StoreId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdBrand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdModel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdSerialNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdPartNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdPriceUnit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdPriceRetail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdPriceWholesale)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdMeasurementUnit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupplierId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

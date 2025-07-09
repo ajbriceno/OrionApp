@@ -1,0 +1,108 @@
+@model OrionApp.Models.Supplier
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Supplier</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SupName" class="control-label"></label>
+                <input asp-for="SupName" class="form-control" />
+                <span asp-validation-for="SupName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupDescription" class="control-label"></label>
+                <input asp-for="SupDescription" class="form-control" />
+                <span asp-validation-for="SupDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupContactName" class="control-label"></label>
+                <input asp-for="SupContactName" class="form-control" />
+                <span asp-validation-for="SupContactName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupContactEmail" class="control-label"></label>
+                <input asp-for="SupContactEmail" class="form-control" />
+                <span asp-validation-for="SupContactEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupContactPhone" class="control-label"></label>
+                <input asp-for="SupContactPhone" class="form-control" />
+                <span asp-validation-for="SupContactPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupAddress" class="control-label"></label>
+                <input asp-for="SupAddress" class="form-control" />
+                <span asp-validation-for="SupAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupCity" class="control-label"></label>
+                <input asp-for="SupCity" class="form-control" />
+                <span asp-validation-for="SupCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupState" class="control-label"></label>
+                <input asp-for="SupState" class="form-control" />
+                <span asp-validation-for="SupState" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupZipCode" class="control-label"></label>
+                <input asp-for="SupZipCode" class="form-control" />
+                <span asp-validation-for="SupZipCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupCountry" class="control-label"></label>
+                <input asp-for="SupCountry" class="form-control" />
+                <span asp-validation-for="SupCountry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupWebsite" class="control-label"></label>
+                <input asp-for="SupWebsite" class="form-control" />
+                <span asp-validation-for="SupWebsite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupMainPhone" class="control-label"></label>
+                <input asp-for="SupMainPhone" class="form-control" />
+                <span asp-validation-for="SupMainPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupPaymentDate" class="control-label"></label>
+                <input asp-for="SupPaymentDate" class="form-control" />
+                <span asp-validation-for="SupPaymentDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedAt" class="control-label"></label>
+                <input asp-for="CreatedAt" class="form-control" />
+                <span asp-validation-for="CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdatedAt" class="control-label"></label>
+                <input asp-for="UpdatedAt" class="form-control" />
+                <span asp-validation-for="UpdatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsActive" /> @Html.DisplayNameFor(model => model.IsActive)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

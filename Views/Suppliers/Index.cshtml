@@ -1,0 +1,125 @@
+@model IEnumerable<OrionApp.Models.Supplier>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SupName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupContactName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupContactEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupContactPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupZipCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupCountry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupWebsite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupMainPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupPaymentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupContactName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupContactEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupContactPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupZipCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupCountry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupWebsite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupMainPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupPaymentDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
